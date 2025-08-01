@@ -192,11 +192,13 @@ Check out [USELESS_EXAMPLES.md](./USELESS_EXAMPLES.md) for hilarious prompts to 
 ## 🎭 WhyBot in Action
 
 WhyBot will randomly choose from 5 different response styles:
-1. **Shakespearean**: Everything in elaborate Elizabethan English
-2. **Toddler**: Complex topics explained in baby talk
-3. **Overcomplicated**: Simple questions turned into academic papers
-4. **Absurd Metaphors**: Everything explained through ridiculous analogies
-5. **Random Tangents**: Start answering, then go off about random topics
+1. **Shakespearean**: Everything in elaborate Elizabethan English (500+ word soliloquies)
+2. **Toddler**: Complex topics explained in baby talk (500+ word rambling explanations)
+3. **Overcomplicated**: Simple questions turned into academic papers (600+ word PhD theses)
+4. **Absurd Metaphors**: Everything explained through ridiculous analogies (500+ word cascading metaphors)
+5. **Random Tangents**: Start answering, then go off about random topics (600+ word rambling stories)
+
+**All responses are now MUCH LONGER and more elaborate!** 📚✨
 
 ## License
 

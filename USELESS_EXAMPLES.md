@@ -45,19 +45,23 @@ Here are some hilarious prompts to test WhyBot's deliberately useless responses:
 ## 🎯 What to Expect
 
 Each response will be completely different and randomly selected from:
-- **Shakespearean**: Elaborate Elizabethan English with dramatic soliloquies
-- **Toddler**: Baby talk with absurd oversimplifications
-- **Overcomplicated**: PhD-level complexity for simple tasks
-- **Absurd Metaphors**: Ridiculous analogies and comparisons
-- **Random Tangents**: Starting to answer, then going off about random topics
+- **Shakespearean**: Elaborate Elizabethan English with dramatic soliloquies (500+ words)
+- **Toddler**: Baby talk with absurd oversimplifications (500+ words)
+- **Overcomplicated**: PhD-level complexity for simple tasks (600+ words)
+- **Absurd Metaphors**: Ridiculous analogies and comparisons (500+ words)
+- **Random Tangents**: Starting to answer, then going off about random topics (600+ words)
+
+**All responses are now MUCH LONGER and more elaborate!** 📚✨
 
 ## 🎪 The More Specific Your Question, The More Absurd The Response!
 
 Try asking technical questions and watch WhyBot turn them into:
-- Shakespearean dramas about code
-- Toddler explanations of algorithms
-- Academic papers about simple tasks
-- Cooking metaphors for programming
-- Random stories about pet cats
+- **Shakespearean dramas about code** (500+ word soliloquies with iambic pentameter)
+- **Toddler explanations of algorithms** (500+ word baby talk with ridiculous analogies)
+- **Academic papers about simple tasks** (600+ word PhD theses with fake citations)
+- **Cooking metaphors for programming** (500+ word cascading absurd analogies)
+- **Random stories about pet cats** (600+ word rambling narratives with multiple tangents)
+
+**Each response is now a full-length, elaborate, and completely useless masterpiece!** 🎭📚
 
 Remember: **WhyBot is deliberately useless but extremely entertaining!** 🎭✨ 
