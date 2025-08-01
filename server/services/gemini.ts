@@ -8,6 +8,31 @@ if (!apiKey) {
 
 const ai = new GoogleGenAI({ apiKey: apiKey || "" });
 
+// Simple in-memory cache for faster responses
+const responseCache = new Map<string, ChatResponse>();
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
+
+function getCacheKey(userMessage: string, style: string): string {
+  return `${userMessage.toLowerCase().trim()}_${style}`;
+}
+
+function getCachedResponse(userMessage: string, style: string): ChatResponse | null {
+  const key = getCacheKey(userMessage, style);
+  const cached = responseCache.get(key);
+  if (cached && Date.now() - cached.metadata?.timestamp < CACHE_TTL) {
+    return cached;
+  }
+  return null;
+}
+
+function cacheResponse(userMessage: string, style: string, response: ChatResponse): void {
+  const key = getCacheKey(userMessage, style);
+  responseCache.set(key, {
+    ...response,
+    metadata: { ...response.metadata, timestamp: Date.now() }
+  });
+}
+
 export interface ChatResponse {
   content: string;
   messageType: 'absurd' | 'shakespearean' | 'toddler' | 'overcomplicated' | 'random';
@@ -35,6 +60,12 @@ export async function generateChatResponse(userMessage: string): Promise<ChatRes
     ];
     
     const selectedStyle = responseStyles[Math.floor(Math.random() * responseStyles.length)];
+    
+    // Check cache first for faster responses
+    const cachedResponse = getCachedResponse(userMessage, selectedStyle);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
     
     let systemPrompt = '';
     
@@ -140,18 +171,25 @@ export async function generateChatResponse(userMessage: string): Promise<ChatRes
       config: {
         systemInstruction: systemPrompt,
         temperature: 0.9, // High temperature for more creative/random responses
-        maxOutputTokens: 4000, // Much longer responses
+        maxOutputTokens: 2000, // Reduced for faster responses
         topP: 0.95, // More creative text generation
         topK: 40, // More diverse vocabulary
+        // Add streaming for faster perceived response
+        stream: false, // Set to true if you want streaming
       },
       contents: userMessage,
     });
 
-    return {
+    const chatResponse = {
       content: response.text || "Alas, my circuits doth fail me in this most dire hour!",
       messageType: selectedStyle as any,
       metadata: { style: selectedStyle, randomness: Math.random() }
     };
+    
+    // Cache the response for future use
+    cacheResponse(userMessage, selectedStyle, chatResponse);
+    
+    return chatResponse;
   } catch (error) {
     console.error('Gemini API error:', error);
     return {
