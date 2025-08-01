@@ -1,15 +1,18 @@
-# WhyBot Chat Application
+# WhyBot - The Deliberately Useless AI 🤖
 
-A modern chat application powered by Google's Gemini AI that provides both technical assistance and creative responses in the style of famous historical figures.
+A hilariously useless chat application powered by Google's Gemini AI that provides absurd, over-the-top responses to any question. Perfect for when you want answers that are completely unhelpful but extremely entertaining!
 
 ## Features
 
-- 🤖 AI-powered chat with Gemini 2.5 Pro/Flash
-- 💻 Technical programming assistance with code examples
-- 🎭 Creative responses in the style of famous figures (Shakespeare, Einstein, etc.)
-- 💬 Real-time chat interface
-- 📱 Responsive design
-- 🎨 Modern UI with Tailwind CSS
+- 🤖 AI-powered chat with Gemini 2.5 Flash
+- 🎭 **Shakespearean Mode**: Everything explained in elaborate Elizabethan English
+- 👶 **Toddler Mode**: Complex topics broken down into absurd baby talk
+- 📚 **Overcomplicated Mode**: Simple questions turned into PhD theses
+- 🎨 **Absurd Metaphor Mode**: Everything explained through ridiculous analogies
+- 🐱 **Random Tangent Mode**: Start answering, then go off about pet cats
+- 💬 Real-time chat interface with chaotic animations
+- 📱 Responsive design with maximum visual chaos
+- 🎨 Beautifully useless UI with Tailwind CSS
 
 ## Tech Stack
 
@@ -175,6 +178,25 @@ For persistent data storage, you can set up a PostgreSQL database:
 - Check the Render logs in your service dashboard
 - Verify all environment variables are set correctly
 - Ensure your API key has the necessary permissions
+
+## 🎪 Example Prompts
+
+Check out [USELESS_EXAMPLES.md](./USELESS_EXAMPLES.md) for hilarious prompts to test WhyBot's deliberately useless responses!
+
+### Quick Examples:
+- "How do I fix a bug?" → Shakespearean drama about code
+- "Explain quantum physics" → Toddler baby talk
+- "What's 2+2?" → PhD thesis with footnotes
+- "How do I cook pasta?" → Random tangent about pet cats
+
+## 🎭 WhyBot in Action
+
+WhyBot will randomly choose from 5 different response styles:
+1. **Shakespearean**: Everything in elaborate Elizabethan English
+2. **Toddler**: Complex topics explained in baby talk
+3. **Overcomplicated**: Simple questions turned into academic papers
+4. **Absurd Metaphors**: Everything explained through ridiculous analogies
+5. **Random Tangents**: Start answering, then go off about random topics
 
 ## License
 

@@ -23,8 +23,8 @@ export const messages = pgTable("messages", {
   conversationId: varchar("conversation_id").references(() => conversations.id),
   role: text("role").notNull(), // 'user' | 'assistant'
   content: text("content").notNull(),
-  messageType: text("message_type"), // 'technical' | 'shakespeare' | 'other'
-  metadata: jsonb("metadata"), // For storing additional data like code language, character type, etc.
+  messageType: text("message_type"), // 'absurd' | 'shakespearean' | 'toddler' | 'overcomplicated' | 'random'
+  metadata: jsonb("metadata"), // For storing additional data like style, randomness, etc.
   createdAt: timestamp("created_at").defaultNow(),
 });
 
